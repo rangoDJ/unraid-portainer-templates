@@ -1,10 +1,10 @@
 sonarr:
-    image: "linuxserver/sonarr"
+    image: "lsiodev/sonarr-preview"
     container_name: "sonarr"
     volumes:
       - /mnt/cache/ConfigFiles/sonarr:/config
-      - ${USERDIR}/Downloads/completed:/downloads
-      - ${USERDIR}/media/tvshows:/MyTVShows
+      #- ${USERDIR}/Downloads/completed:/downloads
+      - /mtn/user/MyTVShows:/MyTVShows
       - "/etc/localtime:/etc/localtime:ro"
     ports:
         - "8989:8989"
